@@ -1,6 +1,6 @@
-# Home Assistant Add-ons: Greg's repository
+# Home Assistant Add-ons: Mike's repository
 
-Add-ons for Home Assistant written by Greg Rapp.
+Add-ons for Home Assistant written by Mike Moyse.
 
 Add-ons can be installed and configured via the Home Assistant frontend on
 systems that have installed Home Assistant.
