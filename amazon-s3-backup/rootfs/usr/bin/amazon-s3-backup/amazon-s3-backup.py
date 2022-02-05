@@ -143,13 +143,13 @@ def upload_file(file: Path, s3_bucket: S3Bucket, supervisor_api: SupervisorAPI):
     metadata = None
     try:
         snapshot_detail = supervisor_api.get_snapshot(slug)
-        metadata_keys = ["type", "name", "date", "homeassistant"]
+        #metadata_keys = ["type", "name", "date", "homeassistant"]
+        metadata_keys = ["type", "name", "date"]
         metadata = {k: snapshot_detail[k]
                     for k in snapshot_detail if k in metadata_keys}
     except SupervisorAPIError as err:
         logger.warning(
             f"Error getting snapshot info from Home Assistant Supervisor API : {err}")
-
     s3_bucket.upload_file(str(file), metadata)
 
 
